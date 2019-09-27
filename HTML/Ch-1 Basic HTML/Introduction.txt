@@ -1,0 +1,192 @@
+Full Stack Web Development = Web Designing + Web Development
+
+
+Technologies used in Web Designing
+1. HTML : For what to display
+2. CSS : For how to display
+3. JavaScript : For intituive and interactive web pages
+
+4. Jquery : JavaScript Library
+5. Bootstrap : CSS Framework
+6. AngularJs : JavaScript Framework
+
+
+Technologies used in Web Development
+
+1. PHP
+2. ASP.NET
+3. JSP
+4. Python (Pyramid or Django) 
+
+
+A. Web Servers
+B. RDBMS
+
+
+
+HTML (Hyper Text Markup Language) : HTML is a web language that is used to design a web page. HTML is a markup (tag) based web language. In html markup or tags are used to tell the web browser how a particular element will be processed. For e.g. the <b> tag in HTML tells the browser to render the encapsulated text in bold format.
+
+
+<b>Text</b>
+<i>Text</i>
+<u>Text</u>
+
+
+
+HTML Page Skeleton
+
+<html>
+	<head>	//Information related to the web page
+	</head>
+
+	<body>	//Information to be displayed in the web page.
+	</body>
+</html>
+
+
+
+HTML Editors/IDEs
+
+1. Notepad++
+2. Sublime
+3. Microsoft Expression Web
+4. Microsoft Visual Studio
+5. Netbeans
+6. Dreamweaver
+7. Aptana
+
+
+
+<head> Sub-Elements
+
+1. <meta>
+2. <script>
+3. <style>
+4. <link>
+5. <no-script>
+
+
+
+Types of Tags
+
+1. Container Tags : <b> Hello </b>
+2. Empty Tags : <br>
+
+
+
+1. Formatting Tags
+
+A. <b>		
+B. <i>		
+C. <u>		
+D. <strong> : Same as <b>
+E. <em> : Same as <i>
+E. <big>
+F. <small>
+G. <sup>
+H. <sub>
+I. <font>
+J. <center>
+K. <ins>			[HTML5]	
+L. <del>			[HTML5]	
+M. <mark>			[HTML5]
+N. <blockquote>			[HTML5]
+O. <strike>			
+P. <p>
+Q. <h1>
+R. <h2>
+S. <h3>
+T. <h4>
+U. <h5>
+V. <h6>
+W. <pre>
+X. <hr>				[E]
+Y. <br>				[E]
+
+
+
+Image Tags
+
+A. <img> 			[E]
+
+Attributes : An attribute provides some additional information about an element.
+
+a. src : Source 
+b. height 
+c. width
+d. align : Left | Right
+e. alt : Alternate Text
+
+
+
+
+
+Web Page - D:\site\a.html
+Image -  D:\image\a.jpg
+
+
+Relative
+..\image\a.jpg
+
+Absolute
+d:\image\a.jpg
+
+
+
+Types of Elements in HTML 
+
+1. Block Type  : Always starts from the new line
+p, div, h1, h2, ul, li
+
+2. Phrasel Type : Always starts with the same line
+b, i, strong, mark, ins, img
+
+
+
+<b>Hello <h1>User</h1></b>		//Incorrect Approach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		div
+		{
+			counter-reset: sno;
+		}
+
+		p::before
+		{
+			counter-increment: sno;
+			content: counter(sno);	
+		}
+
+		p::first-letter
+		{
+			font-weight: 900;
+		}
+
+		p::after
+		{
+			display:block;
+			content: 'Read More';
+			text-align:right;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Para One</p>
+		<p>Para Two</p>
+		<p>Para Three</p>
+	</div>
+	<div>
+		<p>Para Four</p>
+		<p>Para Five</p>
+	</div>
+</body>
+</html>

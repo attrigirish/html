@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*
+		{
+			margin:0px;
+			padding:0px;
+		}
+
+		body
+		{
+			padding-top:40px;
+		}
+
+		#banner
+		{
+			height: 300px;	
+			position: relative;		
+		}
+
+		#banner img
+		{
+			height:100%;
+			width:100%;
+		}
+
+		#ico-left
+		{
+			display:block;
+			position: absolute;
+			height:40px;
+			width: 40px;
+			background-color:white;
+			top:130px;
+			left:30px;
+			border-radius: 50%;
+		}
+
+		#ico-right
+		{
+			display:block;
+			position: absolute;
+			height: 40px;
+			width:40px;
+			background-color: white;
+			top:130px;
+			right:30px;
+			border-radius: 50%;
+		}
+
+		#highlight
+		{
+			height:40px;
+			width: 100%;
+			bottom:0px;
+			background-color:rgba(255,0,0,0.5);
+			position: absolute;
+		}
+
+		#menu
+		{
+			position: fixed;
+			top:0px;
+			height:40px;
+			width: 100%;
+			background-color:red;
+		}
+
+		#content
+		{
+			height:600px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="menu">
+	</div>
+
+
+	<div id="banner">
+		<i id="ico-left"></i>
+		<i id="ico-right"></i>
+		<img src="banner.jpg">
+		<div id="highlight">
+		</div>
+	</div>
+</body>
+</html>

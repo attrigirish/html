@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table align="center">
+		<tr>
+			<td>
+				<textarea id="note" rows="10" cols="120">
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="Save Note" style="width:100%;display:block" onclick="SaveNote();">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+<script>
+	function SaveNote()
+	{
+		note = document.getElementById('note').value;
+		localStorage.setItem("note",note);
+	}
+</script>

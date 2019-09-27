@@ -1,0 +1,77 @@
+HTML 5 API
+
+1. WebSocket API
+2. Messaging API
+3. File API
+4. File System API
+5. Indexed DB API
+6. Web Storage API
+7. Drag and Drop API
+8. Web Workers API etc.
+9. Location API
+
+
+
+1. Web Storage API
+
+The Web Storage API provides mechanisms by which browsers can store key/value pairs.
+
+Web Storage Mechanisms
+
+A. localStorage
+
+localStorage does the same thing, but persists even when the browser is closed and reopened.
+
+B. sessionStorage
+
+sessionStorage maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores)
+
+
+Methods:
+
+1. setItem() : Stores a value in key/value pair.
+
+2. getItem() : Returns the value of a key
+
+3. removeItem() : Removes the item for the key specified
+
+4. clear() : Removes all items from the storage.
+
+
+Saving Data in Storage
+
+localStorage.setItem("user","Girish");
+
+Retreiving Data from the Storage
+
+localStorage.getItem("user");	//Returns 'Girish'
+
+Deleting an Item
+
+localStorage.removeItem("user");
+
+
+
+Geolocation API
+
+HTML5 Geolocation API lets you share your location with your favorite web sites. A Javascript can capture your latitude and longitude and can be sent to backend web server and do fancy location-aware things like finding local businesses or showing your location on a map.
+
+Methods : 
+
+getCurrentPosition()	
+This method retrieves the current geographic location of the user.
+
+watchPosition()	
+This method retrieves periodic updates about the current geographic location of the device.
+
+clearWatch()	
+This method cancels an ongoing watchPosition call.
+
+
+
+
+
+
+
+
+

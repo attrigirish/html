@@ -1,0 +1,26 @@
+HTML 5 Media Controls
+
+1. audio
+2. video
+3. track
+4. source
+
+
+
+HTML 5 Video Tag
+
+<video src="" height="" width="" autoplay="" autobuffer="" controls="" muted="" poster="" loop="">
+	<source></source>
+	<source></source>
+	<source></source>
+</video>
+
+HTML 5 Audio Tag
+
+<audio src="" height="" width="" autoplay="" autobuffer="" controls="" muted=""  loop="">
+	<source></source>
+	<source></source>
+	<source></source>
+</audio>
+
+

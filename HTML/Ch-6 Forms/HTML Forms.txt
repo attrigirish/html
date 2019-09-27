@@ -1,0 +1,222 @@
+HTML Forms
+
+An HTML form is used to interact with the end users. HTML forms are primary use to either collect information from the user and to give some information to the user. An HTML form may contain either a single input control or multiple input controls.
+
+
+HTML Form Tags
+
+1. <form> : form tag informs the browser about a form. All input controls must be placed inside the form tag. 
+
+2. <input> : renders textbox, button, file upload, checkbox, radio button, password box controls etc.
+
+3. <select> : renders a drop down list or list box control.
+
+4. <textarea> : renders a multiline text box control.
+
+5. <fieldset> : encapsulates input controls in a bordered box. 
+
+6. <legend> : prints a title on the top of a fieldset box.
+
+7. <datalist> [HTML5] : It has no User interface. datalist options are oftenly used to provide suggestions for the text input controls.
+
+8. <button> [HTML5] : renders a button control.
+
+
+2. <input> 
+
+Declaration
+
+<input type="control-type">
+
+e.g.
+
+<input type="text">
+
+
+
+Control Types
+
+1. text 				TextBox			
+2. email  [5] 			TextBox
+3. search [5] 			TextBox
+4. number [5] 			TextBox
+5. range  [5]			TextBox
+6. url    [5]			TextBox
+7. tel    [5]  			TextBox
+8. password 			TextBox
+9. button 				Button
+10. submit 				Button
+11. reset 				Button
+12. checkbox 			Checkbox
+13. radio 				Radio Button
+14. date [5]			TextBox/Dialog Box
+15. datetime-local [5] 	TextBox/Dialog Box
+16. color 				Color Palette
+17. file 				File Upload Control
+18. hidden				-
+
+
+3. <select> 
+
+Declaration (Drop Down List)
+
+<select>
+	<option>Option 1</option>
+	<option>Option 2</option>
+	....
+</select>
+
+e.g.
+
+<select>
+	<option>New Delhi</option>
+	<option>Chennai</option>
+</select>
+
+
+
+Declaration (List Box)
+
+<select multiple size="#">
+	...
+	...
+</select>
+
+
+4. <textarea>
+
+Declaration:
+
+<textarea rows="#" cols="#">
+</textarea>
+
+
+
+
+7. <datalist>
+
+Declaration
+
+<datalist id="id">
+	<option>Option 1</option>
+	<option>Option 2</option>
+	<option>Option 3</option>
+</datalist>
+
+E.g.
+
+<datalist id="city">
+	<option>New Delhi</option>
+	<option>Mumbai</option>
+</datalist>
+
+
+8. <button>
+
+Declaration
+
+<button type="">
+....
+</button>
+
+
+
+
+1. <form>
+
+Declaration:
+
+<form>
+	...
+	Place your Input controls here.
+	...
+</form>
+
+
+Attributes
+
+1. action : Specifies the name of the target script, where data of the form controls will be submitted. If ommitted data will be submitted to the same script/page on the server side.
+
+2. method : Specifies how browser will process the data. Method attribute's values are:
+
+A. GET : When used the data will be appended in the url. This method is not suitable while uploading/submitting sensitive data.
+
+B. POST : When used the data is submitted in a separate package. 
+
+
+
+
+Text Type Attributes
+
+A. autocomplete 	[HTML5]
+B. autofocus		[HTML5]
+C. disabled
+D. height
+E. width
+F. maxlength
+G. minlength
+H. size
+I. list 			[HTML5]
+J. placeholder		[HTML5]
+K. pattern			[HTML5]
+L. readonly
+M. required			[HTML5]
+N. value
+
+
+HTML Regular Expressions:
+
+Regular Expressions are a sequence of a predefined set of characters. Regular expressions are oftenly used to specify for a patten within text.
+
+
+a 			:	Alphabet 'a'
+[abc]		: 	Either of a, b or c
+[a-c]		: 	Same as above
+[0-9]		: 	Any numeric character
+[A-Za-z]	:   Any alphabet
+
+
+Quantifiers
+
+{n}			:   Exacty n occureces
+{m,n}		:   Minimum m and Maximum n occurences
+{m,}		:   Minimum m occurences
+{,n}		:   Maximum n occurences
++			:   1 or Many Same as {1,}
+*           :   0 or Many 
+?			:   0 or 1
+
+
+
+Checkbox/Radiobutton Attribues
+
+A. checked
+
+
+File Upload Control
+
+A. multiple
+B. accept
+
+<input type="file" accept="image/*" multiple>
+
+Number/Range
+
+A. min
+B. max
+C. step
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

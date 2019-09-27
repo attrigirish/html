@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style="text-align: center;">Saving Complex Data</h1>
+
+	<table align="center">
+		<tr>
+			<td>Name</td>
+			<td><input type="text" id="name">
+		</tr>
+		<tr>
+			<td>Phone Number</td>
+			<td><input type="text" id="phone">			
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="email" id="email">
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="Save Contact" style="width:100%;display:block" onclick="SaveContact();">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+<script>
+	function SaveContact()
+	{
+		name = document.getElementById('name').value;
+		phone = document.getElementById('phone').value;
+		email = document.getElementById('email').value;
+
+		localStorage.setItem("name",name);
+		localStorage.setItem("phone",phone);
+		localStorage.setItem("email",email);
+	}
+</script>

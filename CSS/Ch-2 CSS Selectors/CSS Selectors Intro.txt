@@ -1,0 +1,301 @@
+CSS Selectors
+
+A CSS selector specifies on which elements a particular rule will be applied.
+
+1. Universal Selector
+2. Tag Selector
+3. ID Selector
+4. Class Selector
+
+
+1. Universal Selector : Applies to all HTML elements
+
+Declaration:
+
+*
+{
+	...
+	...
+}
+
+
+2. Tag Selector : Applies to all HTML elements with the same Tag name
+
+
+p
+{
+	....
+	....
+}
+
+b
+{
+	...
+	...
+}
+
+
+p,b
+{
+	...
+	...
+}
+
+
+
+3. ID Selector : Applies to HTML element with the matching id value
+
+
+#head
+{
+	...
+	...
+}
+
+
+<div id="head">
+...
+</div>
+
+
+
+4. class Selector : Applies to all HTML elements with matching class value
+
+
+.item
+{
+	...
+	...
+}
+
+<div class="item">
+</div>
+
+
+<div class="item">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Extended Selectors
+
+1. Child Selector
+2. Descendent Selector
+3. Sibling Selector
+4. Attribute Selector
+5. Pseudo-Class Selector
+6. Pseudo-Element Selector
+
+
+1. Child Selector : Applies to children of a particular parent type.
+
+Declaration:
+
+.item > h3
+{
+	...
+	...
+}
+
+
+
+<div class="item">
+<h3>Hello</h3>
+</div>
+
+<div class="item">
+<h3>Hi</h3>
+</div>
+
+<h3>Another Heading</h3>
+
+
+2. Descendent Selector : Applies to all descendent elements of a particular ancestor type.
+
+Declaration:
+
+.article h2
+{
+	...
+	...
+}
+
+
+
+
+<a>
+	<b>
+		<c>
+		</c>
+	</b>
+	<e>
+		<f>
+		</f>
+	</e>
+	<d>
+	</d>
+</a>
+
+b+e
+{
+	
+}
+
+Name all the children of <a> : b,d,e
+Name all the descendent of <a> : b,c,d,e,f
+
+
+
+3. Attribute Selector : Applies to elements with a specific attribute or attribute value
+
+
+input[type="text"]
+{
+	border:1px solid orange;
+}
+
+<input type="text">
+<input type="file">
+
+
+4. Pseudo Class Selector : Specifies a specific state of an element.
+
+div:hover
+{
+	...
+	...
+}
+
+input:focus
+{
+	...
+	...
+}
+
+
+
+5. Pseduo Element Selectors
+
+::first-letter
+::first-line
+::before
+::after
+::selection
+
+
+p::first-letter
+{
+	font-size:48px;
+}
+
+
+
+1. Universal 
+
+*
+{
+	
+}
+
+
+2. Tag
+
+p
+{
+	
+}
+
+
+3. ID
+
+#myselector
+{
+	
+}
+
+4. Class
+
+.myselector
+{
+	
+}
+
+
+5. Child
+
+parent > child
+{
+	
+}
+
+6. Descendent
+
+parent descendent
+{
+	
+}
+
+7 Attribute 
+
+input[required]
+{
+	
+}
+
+
+8. Pseudo-Class
+9. Pseudo-Element
+10. Sibling Selector
+
+
+h1+a
+{
+	...
+	...
+}
+
+<h1></h1>
+<a></a>
+<a></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

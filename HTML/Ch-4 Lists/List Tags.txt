@@ -1,0 +1,29 @@
+List Tags
+
+
+1. <ul> : Unordered list
+2. <ol> : Ordered List
+3. <li> : List Item
+
+
+
+A list is a group of elements positioned vertically or horizontally, prefixed by either a number or symbol.
+
+E.g.
+
+Receipe (Numbered List)
+Ingredients (Bulleted List)
+
+
+Declaration
+
+<ol>
+	<li>Value</li>
+	<li>Value</li>
+</ol>
+
+
+<ol>, <ul> Attributes:
+
+1. type : 1, i, a, I, A, circle, disk, rectangle
+2. start : Any Number

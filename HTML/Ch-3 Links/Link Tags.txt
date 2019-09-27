@@ -1,0 +1,19 @@
+Link Tags 
+
+<a> : Anchor Tag
+
+Links/Hyper Links allows a user to navigate through the different sections of a web site. Links can also be used to navigate to an external web site, or to navigate within the same web page.
+
+Types of Links
+1. Navigating to the same website.
+2. Navigating in the same web page.
+3. Navigating to an external web site.
+4. Download Links
+
+
+Declaration
+
+<a href="url">HyperText/Image</a>
+
+
+url : http:/www.flipkart.com/products/mia1.html

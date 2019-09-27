@@ -1,0 +1,623 @@
+CSS : Cascading Style Sheets
+-----------------------------------------------------
+
+CSS or Cascading Style Sheets are used to design the layout and look and feel of web pages.
+
+
+
+CSS Rules
+-----------------------------------------------------
+
+A CSS rule is a set or collection of css properties, which specifies how a particular element or a group of elements will appear.
+
+e.g.
+
+p
+{
+	color:white;
+	background-color:orange;
+}
+
+
+
+Types of CSS
+-----------------------------------------------------
+
+
+1. Inline CSS : This is least common approach amongst the designer|developers. In Inline CSS, the css rule can be defined in the HTML tag. The downside of the inline css is, that to change a rule which applies to multiple elements, changes in all elements will be required.
+
+
+e.g.
+
+
+<p style="color:red;font-size:20px">
+...
+</p>
+
+
+
+2. Internal CSS : In Internal CSS the rules are defined inside <style> tag. Internal CSS rules require a selector name, which is used to describe on which element the rule will be applied.
+
+
+<style>
+	p 		<-			selector (TAG SELECTOR)
+	{
+		color:red;
+		font-size:20px;
+	}
+</style>
+
+
+<p>				//Will be printed in afore mentioned style
+	....
+</p>
+
+
+3. External CSS : Same as Internal CSS. CSS rules in External CSS are defined in an external CSS file. This rule file can then be used in either a single web page or multiple pages. Suitable for websites with large number of web pages.
+
+
+E.g.
+
+style.css
+
+p
+{
+	color:red;
+	font-size:20px;
+}
+
+
+home.html
+
+<link href="style.css" rel="stylesheet">
+
+
+
+
+CSS Selectors
+-----------------------------------------------------
+
+1. Universal Selector : Applies to all html elements
+
+*
+{
+	...
+}
+
+
+2. Tag Selector : Applies to all elements with the same tag name.
+
+p
+{
+	...
+}
+
+h1
+{
+	...
+}
+
+
+3. ID Selector : Applies to a single HTML element whose id values matches with the ID selector.
+
+#header
+{
+	....
+}
+
+
+To Apply
+
+<div id="header">
+</div>
+
+
+4. Class Selector : Applies to all HTML elements whose class values matches with the class selector.
+
+
+.item
+{
+	...
+}
+
+To Apply
+
+<div class="item">
+	<img>
+</div>
+
+
+5. Child Selector : Applies to all children elements or specific children of their parents.
+
+parent-selector > child-selector
+{
+	....
+}
+
+e.g.
+
+.item > img
+{
+	...
+	...
+}
+
+To Apply
+
+<div class="item">
+	<img src="...">
+</div>
+
+
+6. Descendent Selector : Applies to all children or non-children elements of a specific element. 
+
+selector  descendent-selector
+{
+	...	
+}
+
+
+.article  a
+{
+	...
+}
+
+
+7. Sibling Selector : Applies to an element which comes immediately after another element.
+
+first-selector + second-selector(sibling)
+{
+	...
+}
+
+
+h1+a+p
+{
+	....
+}
+
+<h1>...</h1>
+<a>...</a>
+<p>...</a>
+
+
+
+8. Attribute Selector : An attribute selector applies to those elements which either contains the specified attribute selector inside them, or attribute value matches with the value specified in the attribute selector.
+
+
+selector[attribute=""]
+{
+	
+}
+
+
+input[required]
+{
+	...
+}
+
+To Apply
+
+<input type="..." required>
+
+
+a[href=""]
+{
+	...
+}
+
+To Apply
+
+<a href="">Test</a>
+<a href="www.google.com">Google</a>
+
+
+9. Psuedo Classes : A pseudo-class is used to define a special state of an element.
+
+selector:psuedo-class
+{
+	
+}
+
+.item:hover
+{
+	...
+}
+
+
+
+A. hover
+B. nth-child
+	nth-child(2),nth-child(odd),nth-child(even)
+C. first-child
+D. last-child
+E. focus
+F. checked
+G. unchecked
+H. empty
+I. in-range
+J. out-of-range
+K. only-child 
+L. optional
+M. read-only
+N. required
+O. visited
+
+
+
+10. Pseudo-elements : A CSS pseudo-element is used to style specified parts of an element.
+
+
+A. first-letter
+B. first-line
+C. before
+D. after
+E. selection
+
+
+
+::pseudo-element
+
+
+body::selection
+{
+	background-color:orange;
+}
+
+
+
+
+Points to Remembers
+
+1. To define a common rule for more than one element apply all selectors together separated with comma.
+
+
+
+h1,p,a,b,i,strong,sup,sub
+{
+	.....
+}
+
+
+
+
+
+a
+{
+	color:cyan;
+	text-decoration:none;
+}
+
+
+a
+{
+	color:blue;
+}
+
+
+
+2. Applying Multiple CSS Classes
+
+.red
+{
+	color:red;
+}
+
+.blue
+{
+	color:blue;
+}
+
+.wd-100
+{
+	width:100%
+}
+
+.wd-50
+{
+	width:50%
+}
+
+.wd-25
+{
+	width:25%
+}
+
+
+
+
+
+
+<p class="wd-50 red">
+</p>
+
+
+
+
+CSS Properties
+
+
+CSS Text Properties
+
+1. text-indent : Specify how much horizontal space should be left before the beginning of the first line of the text content.
+
+Values : #number | inherit | initial (default)
+
+2. direction :  Define the text direction (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
+
+Values : ltr | rtl | inherit | initial (default)
+
+*********3. text-orientation : Define the orientation of the text in a line.
+
+
+Values : upright | sideways | sideways-right | mixed | use-glyph-orientation
+
+
+4. text-decoration : Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.)
+
+Values : none | underline | overline | line-through
+
+
+5. text-shadow : You can apply drop shadows to your text using the text-shadow property.
+
+Values : value-x-axis value-y-axis color
+
+
+
+
+
+
+CSS Padding Properties 
+------------------------------
+Padding is the space between an element's border and its content.
+
+
+1. padding-left
+values : number 
+
+2. padding-right
+values : number
+
+3. padding-top
+values : number
+
+4. padding-bottom
+values : number
+
+5. padding
+
+format#1 : top right bottom left
+e.g. 
+padding:5px 20px 10px 5px;
+
+format#2 : top|bottom left|right
+e.g.
+padding:10px 20px;
+
+format#3 : top|bottom|left|right
+padding:10px;
+
+
+CSS Margin Properties 
+---------------------------
+Margin is the space between two elements
+
+
+1. margin-left
+values : number 
+
+2. margin-right
+values : number
+
+3. margin-top
+values : number
+
+4. margin-bottom
+values : number
+
+5. margin
+
+format#1 : top right bottom left
+e.g. 
+margin:5px 20px 10px 5px;
+
+format#2 : top|bottom left|right
+e.g.
+margin:10px 20px;
+
+format#3 : top|bottom|left|right
+margin:10px;
+
+
+
+CSS Border Properties
+--------------------------------------
+
+
+1. border-left-style
+values:   solid | groove | dotted | ridge | dashed | double | inset | outset
+
+2. border-left-color
+3. border-left-width
+4. border-left
+
+5. border-right-style
+6. border-right-color
+7. border-right-width
+8. border-right
+
+9. border-top-style
+10. border-top-color
+11. border-top-width
+12. border-top
+
+13. border-bottom-style
+14. border-bottom-color
+15. border-bottom-width
+16. border-bottom
+
+17. border-style 	
+18. border-color
+19. border-width
+20. border (format-> border: width style color)
+
+21. border-top-left-radius
+22. border-top-right-radius
+23. border-bottom-left-radius
+24. border-bottom-right-radius
+25. border-radius
+
+
+Box-Model
+------------------------------------
+
+When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard CSS box model. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.
+
+Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.
+
+
+Calculating the Size of a Box
+
+Types of a Box
+1. Content Box
+
+In Content only the size of the content is considered whereas the sizes of other parameters (padding, border) are ignored.
+
+height=height of content area
+width=width of content area
+
+2. Border Box
+
+In border box all the sizes of content, padding and border are added together.
+
+height=top-border+top-padding+content+bottom-border+bottom-padding
+width=left-border+left-padding+content+right-border+right-padding
+
+
+Box-Sizing Property
+------------------------------
+
+The box-sizing property is used to tell the browser what the sizing properties (width and height) should include. Should they include the border-box? Or just the content-box (which is the default value of the width and height properties)
+
+
+box-sizing:border-box;
+or
+box-sizing:content-box; (default)
+
+
+
+CSS Background Properties
+--------------------------------
+
+1. background-color
+
+format#1 : background-color: color-name
+format#2 : background-color: rgb(red,green,blue) (*All values must be between 0 and 255)
+format#3 : background-color: rgba(red,green,blue,alpha) (Alpha values must be between 0 and 1)
+format#4 : background-color: #RRGGBB (All values must be between 0 and F)
+
+2. background-image
+background-image:url('path')
+
+3. background-position : Specifies the position that the background should appear inside the element background.
+
+values = top | bottom | left | right | center
+
+/* Keyword values */
+background-position: top;
+background-position: bottom;
+background-position: left;
+background-position: right;
+background-position: center;
+
+/* <percentage> values */
+background-position: 25% 75%;
+
+/* <length> values */
+background-position: 0 0;
+background-position: 1cm 2cm;
+background-position: 10ch 8em;
+
+/* Multiple images */
+background-position: 0 0, center;
+
+/* Edge offsets values */
+background-position: bottom 10px right 20px;
+background-position: right 3em bottom 10px;
+background-position: bottom 10px right;
+background-position: top right 10px;
+
+/* Global values */
+background-position: inherit;
+background-position: initial;
+background-position: unset;
+
+
+4. background-repeat : Specifies whether the background should be repeated (tiled) or not.
+
+/* One-value syntax */
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+background-repeat: repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
+
+/* Two-value syntax: horizontal | vertical */
+background-repeat: repeat space;
+background-repeat: repeat repeat;
+background-repeat: round space;
+background-repeat: no-repeat round;
+
+/* Global values */
+background-repeat: inherit;
+background-repeat: initial;
+background-repeat: unset;
+
+5. background-attachment
+
+6. background-clip
+
+7. background-origin
+
+8. background-size
+
+9. background
+
+
+
+
+
+
+Box Positioning System (Box Positions)
+
+CSS Box Positions
+1. static (default)
+2. relative
+3. absolute
+4. fixed
+
+Position Properties
+
+*Note: top, left, right and bottom properties are only worked with relative, absolute and fixed positioned elements.
+
+1. position
+2. top
+3. left
+4. right
+5. bottom
+
+
+
+List Properties
+----------------------
+
+1. list-style-type
+values:   none | loweralpha | upperalpha | lowerroman | upperroman | disk | circle | square |  decimal
+
+2. list-style-image
+
+3. list-style-position
+
+
+

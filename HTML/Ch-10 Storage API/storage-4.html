@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Reading Simple Data</h1>
+
+	<p id="note"></p>
+</body>
+</html>
+
+
+<script>
+	note = localStorage.getItem("note");
+	document.getElementById('note').innerHTML=note;
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style="text-align: center;">Reading Complex Data</h1>
+
+	<table align="center">
+		<tr>
+			<td>Name</td>
+			<td><b id="name"></b>
+		</tr>
+		<tr>
+			<td>Phone Number</td>
+			<td><b id="phone"></b>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><b id="email"></b>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+<script>
+
+	contact=JSON.parse(localStorage.getItem("contact"));
+
+	name=contact.name;
+	phone=contact.phone;]
+	email=contact.email;
+
+	document.getElementById('name').innerHTML=name;
+	document.getElementById('phone').innerHTML=phone;
+	document.getElementById('email').innerHTML=email;
+</script>

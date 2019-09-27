@@ -1,0 +1,13 @@
+HTML Images
+
+<img> : Image Tag	(E)
+
+Attributes : Attributes are a way of providing additional data to the browser about the element. For. e.g border attribute tells the browser to display a border around the element.
+
+Image Attributes:
+
+A. src  (Source) 
+B. height
+C. width
+D. alt
+E. align [left|right]

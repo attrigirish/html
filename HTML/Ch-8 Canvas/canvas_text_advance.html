@@ -1,0 +1,38 @@
+﻿<html>
+
+<head>
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+<h1>HTML5 Canvas Object</h1>
+
+Text to Display : <input type="text" id="text"> <br>
+X : <input type="text" id="x"> <br>
+Y : <input type="text" id="y"> <br>
+
+<input type="button" onclick="paint()" value="Paint"> <br><br>
+
+<canvas id="mycanvas" style="width:400px;height:400px;border:1px red solid;"></canvas>
+
+<script>
+
+function paint()
+{
+
+var text=document.getElementById('text').value;
+var x=document.getElementById('x').value;
+var y=document.getElementById('y').value;
+
+
+var canvas = document.getElementById("mycanvas").getContext("2d");
+canvas.font = "30px Arial";
+canvas.fillText(text,x,y);
+}
+
+</script>
+
+</body>
+
+</html>

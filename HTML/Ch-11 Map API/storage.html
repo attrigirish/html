@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="city"> 
+
+	<input type="button" value="Save" onclick="Save();">
+	<input type="button" value="Delete" onclick="Delete();">
+	<input type="button" value="Load" onclick="Load();">
+
+	<script>
+		function Save()
+		{
+			city=document.getElementById('city').value;
+			localStorage.setItem('city', city);
+		}
+
+		function Delete()
+		{
+			localStorage.removeItem('city');
+		}
+
+		function Load()
+		{
+			city=localStorage.getItem('city');
+			document.getElementById('city').value=city;
+		}
+	</script>
+</body>
+</html>

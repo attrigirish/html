@@ -1,0 +1,32 @@
+CSS Positions
+
+1. static (default)
+2. relative
+3. absolute
+4. fixed
+
+Note*: IN CSS relative, abosolute and fixed positoned elements are also called positional elements. Positional elements irrespective of there sequence/hierarchy can be placed anywhere on the page. Positional elements can be positioned using the 'top', 'left', 'bottom' and 'right' properties.
+
+
+Note: Static and relative elements take 100% space of the element where as absolute and fixed elements do not take any space on the page.
+
+
+1. static : Static position is the default in css. By default all static elements are positioned vertically on the page.
+
+2. relative : Relative position can be used to position an element relative to another element in the page.
+
+3. fixed : Fixed position can be used to display an element on a fixed position of the screen. Example positioning an element at the bottom right of the screen.
+
+
+4. absolute: Absolute position can be used to display an element at an absolute position within any other element in the page.
+
+
+
+
+
+
+width : 100%
+
+absolute|fixed
+
+width:0

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+	<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+<body>	
+	<h3 id="lat"></h3>
+	<h3 id="lon"></h3>
+
+ 	<div id="map"></div>
+
+	<input type="button" value="Get User Location" onclick="DisplayLocation();">
+</body>
+</html>
+
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscQkgZAk8dcUUpn6HsFk4pjGERalxQjw&callback=initMap">
+    </script>
+
+<script>
+	function DisplayLocation()
+	{
+		navigator.geolocation.getCurrentPosition(success,failure);
+	}
+
+	function success(location)
+	{
+		//alert('location allowed');
+		lat = location.coords.latitude;
+		lon = location.coords.longitude;
+
+		document.getElementById('lat').innerHTML=lat;
+		document.getElementById('lon').innerHTML=lon;
+
+		var uluru = {lat: lat, lng: lon};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+	}
+
+	function failure()
+	{
+		//alert('location denied');
+	}
+</script>
