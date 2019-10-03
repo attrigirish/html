@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#countdown-box
+		{
+			position: absolute;
+			top:30%;
+			left:35%;
+			width:30%;
+			height:40%;
+			background-color: orange;
+			border-radius: 20px;
+			padding: 20px;		
+			text-align: center;	
+		}
+
+		#timer
+		{
+			display: block;
+			text-align: center;
+			font-size:80px;
+			color:white;
+			margin-top:60px;
+			margin-bottom: 30px;
+		}
+
+		.btn
+		{
+			display: inline-block;
+			padding:10px;
+			background-color:lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<div id="countdown-box">
+		<span id="timer">00:00:00</span>
+		<div>
+			<span class="btn" onclick="StartTimer();">Start</span>
+			<span class="btn" onclick="PauseTimer();">Pause</span>
+			<span class="btn" onclick="StopTimer();">Stop</span>
+		</div>
+	</div>
+
+	<script>
+		counter=0;
+
+		function StartTimer()
+		{
+			task=setInterval(Timer,990);
+		}
+
+		function PauseTimer()
+		{
+			clearInterval(task);
+		}
+
+		function StopTimer()
+		{
+			clearInterval(task);
+			counter=0;
+		}
+
+
+		function Timer()
+		{
+			counter++;
+
+			seconds=counter;
+			hours=parseInt(seconds/3600);
+			seconds=seconds%3600;
+
+			minutes=parseInt(seconds/60);
+			seconds=seconds%60;
+
+			if(hours<10)
+			{
+				hours="0"+hours;
+			}
+			if(minutes<10)
+			{
+				minutes="0"+minutes;
+			}
+			if(seconds<10)
+			{
+				seconds="0"+seconds;
+			}
+
+
+			document.getElementById('timer').innerHTML=[hours,minutes,seconds].join(':');
+		}
+
+	</script>
+
+</body>
+</html>

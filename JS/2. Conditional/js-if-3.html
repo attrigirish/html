@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.inp-box
+		{
+			height:40px;
+			width:250px;			
+			position: relative;
+		}
+
+		.inp-box input
+		{
+			height:100%;
+			width:100%;
+			border-radius: 10px;
+			display: block;
+			float:left;
+			font-size:25px;
+		}
+
+		.inp-box img
+		{
+			height:100%;
+			position: absolute;
+			right:0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="inp-box">
+		<input type="password" id="password">
+		<img src="../images/eye.png" onclick="RevealHide();">
+	</div>
+
+	<script>
+		function RevealHide()
+		{
+			if(document.getElementById('password').type=='password')
+			{
+				document.getElementById('password').type='text';
+			}
+			else
+			{
+				document.getElementById('password').type='password';
+			}
+		}
+	</script>
+</body>
+</html>

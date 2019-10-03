@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="3"><input type="text" id='txt'></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="1"></td>
+			<td><input type="button" class="btn" value="2"></td>
+			<td><input type="button" class="btn" value="3"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="4"></td>
+			<td><input type="button" class="btn" value="5"></td>
+			<td><input type="button" class="btn" value="6"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="7"></td>
+			<td><input type="button" class="btn" value="8"></td>
+			<td><input type="button" class="btn" value="9"></td>
+		</tr>
+		<tr>
+			<td colspan="3"> <input type="button" class="btn" value="0"></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<input type="button" class="op" value="+">
+				<input type="button" class="op" value="-">
+				<input type="button" class="op" value="/">
+				<input type="button" class="op" value="*">
+				<input type="button" class="op" value="=">
+			</td>
+		</tr>
+	</table>
+
+	<script>
+
+		val1=null;
+		val2=null;
+		op=null;
+
+		buttons=document.getElementsByClassName('btn');
+		for(i=0;i<10;i++){
+			buttons[i].addEventListener('click',function(){
+				document.getElementById('txt').value+=this.value;			
+			});
+		}
+
+		operations=document.getElementsByClassName('op');
+		for(i=0;i<10;i++)
+		{
+			operations[i].addEventListener('click',function(){
+				Calculate();
+				if(this.value=='+')
+				{
+					op='+';
+				}
+				else if(this.value=='-')
+				{
+					op='-';
+				}
+				else if(this.value=='/')
+				{
+					op='/';
+				}
+				else if(this.value=='*')
+				{
+					op='*'
+				}
+				else
+				{
+					op='=';
+				}
+			});
+		}
+
+		function Calculate()
+		{
+			if(op==null){
+				val1=Number(document.getElementById('txt').value);
+				document.getElementById('txt').value='';
+			}
+			else{
+				val2=Number(document.getElementById('txt').value);
+				document.getElementById('txt').value='';			
+				if(op=='+'){
+					result=val1+val2;
+				}	
+				else if(op=='-'){
+					result=val1-val2;
+				}
+				else if(op=='/'){
+					result=val1/val2;
+				}
+
+
+				document.getElementById('txt').value=result;
+			}
+		}
+	</script>
+
+</body>
+</html>
+
+
+

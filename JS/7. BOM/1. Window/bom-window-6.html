@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body{
+			height:10000px;
+		}
+
+		#info
+		{
+			position: fixed;
+			top:30px;
+			left:30px;
+		}
+
+		#bottom-sticker
+		{
+			position: fixed;
+			bottom:20px;
+			right:20px;
+			background-color:red;
+			width:30px;
+			height:30px;
+			border-radius: 50%;
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id='info'>
+	Inner Height : <span id="a"></span> <br>
+	Inner Width : <span id="b"></span> <br>
+	Outer Height : <span id='c'></span> <br>
+	Outer Width : <span id='d'></span> <br>
+	X Position : <span id='e'></span> <br>
+	Y Position : <span id='f'></span> <br>
+	</div>
+
+	<div id="bottom-sticker">		
+	</div>
+
+	<script>
+		document.getElementById('a').innerHTML=innerHeight;
+		document.getElementById('b').innerHTML=innerWidth;
+		document.getElementById('c').innerHTML=outerHeight;
+		document.getElementById('d').innerHTML=outerWidth;
+		document.getElementById('e').innerHTML=pageXOffset;
+		document.getElementById('f').innerHTML=pageYOffset;
+	
+		document.onscroll=Update;
+
+		function Update()
+		{
+			document.getElementById('e').innerHTML=pageXOffset;
+			document.getElementById('f').innerHTML=pageYOffset;
+
+
+			if(pageYOffset>2000)
+			{
+				document.getElementById('bottom-sticker').style='visibility:visible';
+			}
+			else
+			{
+				document.getElementById('bottom-sticker').style='visibility:hidden';				
+			}
+
+		}
+
+	</script>
+
+
+</body>
+</html>

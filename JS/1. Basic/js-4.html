@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+
+
+		#news-box
+		{
+			border:1px solid black;
+			height:400px;
+			width:300px;
+			background-color: lightgray;
+		}
+
+		#menu-row
+		{
+			height:40px;
+			background-color: orange;
+		}
+
+		#menu-row  .btn
+		{
+			font-family: calibri;
+			margin:0px;
+			width:33%;
+			height:100%;
+			float:left;
+			padding-top: 12px; 
+			text-align:center;
+			color:white;
+			box-sizing: border-box;
+			border-right:1px solid black;
+		}
+
+		#menu-row div:last-child
+		{
+			border-right-style:none;
+			border-width: 0px;
+		}
+
+		.btn:hover
+		{
+			background-color:lightgray;
+		}
+
+		#news{
+			padding:20px;
+		}
+
+		#news p
+		{
+			border:1px solid black;
+			padding:5px;
+		}
+
+	</style>
+
+
+	<script>
+		function LoadSports()
+		{
+			output="<p>Competing for the first time since his fourth round defeat by Stefanos Tsitsipas at Australian Open, Roger Federer overcame a blip midway through his match before rallying to beat Philipp Kohlschreiber.</p> <p>Chelsea have fined goalkeeper Kepa Arrizabalaga one week's wages following his refusal to be substituted in the League Cup final defeat by Manchester City at Wembley on Sunday.</p>";
+
+			document.getElementById('news').innerHTML=output;
+		}
+
+		function LoadPolitics()
+		{
+			output="";
+
+			document.getElementById('news').innerHTML=output;
+		}
+
+		function LoadBollywood()
+		{
+			output="<p>On February 24, last year, the film industry lost one of its legendary actress' Sridevi, that did not only leave fans in deep shock, but also the Kapoor family that did not only lose a doting wife, but it also lost a loving mother. </p> <p>The release date of the Kartik Aaryan, Ananya Panday and Bhumi Pednekar-starrer Pati Patni Aur Woh has been locked. The modern-day rendition of the BR Chopra-directed 1978 comedy will hit the screens on January 10 next year.</p>";
+
+			document.getElementById('news').innerHTML=output;
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<h1>Changing the content of an Element</h1>
+
+	<div id="news-box">
+		<div id="menu-row">
+			<div class="btn" onclick="LoadSports();">
+				Sports
+			</div>
+			<div class="btn" onclick="LoadPolitics();">
+				Politics
+			</div>
+			<div class="btn" onclick="LoadBollywood();">
+				Bollywood
+			</div>
+		</div>
+		<div id=news>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>			
+		</div>
+	</div>
+</body>
+</html>

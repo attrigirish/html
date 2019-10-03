@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="error">
+	</ul>
+
+	<table>
+		<tr>
+			<td>Id</td>
+			<td><input type="text" id="id">
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" id="name">
+		</tr>
+		<tr>
+			<td>Age</td>
+			<td><input type="text" id="age">
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="Save" onclick="Validate();">
+			</td>
+		</tr>
+	</table>
+
+
+	<script>
+		function Validate()
+		{
+			document.getElementById('error').innerHTML="";
+
+			if(document.getElementById('id').value=='')
+			{
+				ele=document.createElement('li');
+				ele.innerHTML='ID is required';
+				document.getElementById('error').appendChild(ele);
+			}
+
+			if(document.getElementById('name').value=='')
+			{
+				ele=document.createElement('li');
+				ele.innerHTML='Name is required';
+				document.getElementById('error').appendChild(ele);
+			}
+
+			if(document.getElementById('age').value=='')
+			{
+				ele=document.createElement('li');
+				ele.innerHTML='Age is required';
+				document.getElementById('error').appendChild(ele);
+			}
+			else if(document.getElementById('age').value<18 || document.getElementById('age').value>60)
+			{
+				ele=document.createElement('li');
+				ele.innerHTML='Age must be Between 18 to 60';
+				document.getElementById('error').appendChild(ele);
+			}
+
+		}
+	</script>
+</body>
+</html>

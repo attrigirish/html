@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*
+		{
+			margin:0px;
+			padding:0px;
+		}
+
+		#caraousel
+		{
+			height:250px;
+			width:100%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#banner
+		{
+			height:250px;
+			width:100%;
+			position: absolute;
+		}
+
+		.animationon
+		{
+			animation-name: slidein;
+			animation-duration: 2s;
+		}
+
+		#prev
+		{
+			height:60px;
+			width:40px;
+			font-size:48px;
+			background-color: white;
+			position: absolute;
+			top:95px;
+			left:0px;
+			text-align: center;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			cursor: pointer;
+		}
+
+		#next
+		{
+			height:60px;
+			width:40px;
+			font-size:48px;
+			background-color: white;
+			position: absolute;
+			top:95px;
+			right:0px;
+			text-align: center;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			cursor: pointer;
+		}
+
+
+		@keyframes slidein
+		{
+			from{
+				left:1366px;
+			}
+			to{
+				left:0px;
+			}
+		}
+
+	</style>	
+</head>
+<body>
+	<div id="caraousel">
+		<img id="banner" src="../images/caraousel-1.jpg" onmouseover="Pause();" onmouseout="Start();">
+		<span id="prev" onclick="LoadPrev();"> &lt; </span>
+		<span id="next" onclick="LoadNext();"> &gt; </span>
+	</div>
+
+	<script>
+		banners=Array('caraousel-1.jpg','caraousel-2.jpg','caraousel-3.jpg','caraousel-4.jpg','caraousel-5.jpg','caraousel-6.jpg');
+
+		index=0;
+		function LoadNext()
+		{
+
+
+			index++;
+
+			if(index==6)
+			{
+				index=0;
+			}
+
+			document.getElementById('banner').src='../images/'+banners[index];
+			AddAnimation();
+
+			setTimeout(RemoveAnimation,2000);
+		}
+
+		function AddAnimation()
+		{
+			document.getElementById('banner').setAttribute('class','animationon');
+		}
+
+
+		function RemoveAnimation()
+		{
+			document.getElementById('banner').setAttribute('class','');
+		}
+
+		function LoadPrev()
+		{
+			index--;
+
+			if(index==-1)
+			{
+				index=5;
+			}
+
+			document.getElementById('banner').src='../images/'+banners[index];
+		}
+
+
+		function Pause()
+		{
+			clearInterval(task);
+			//document.getElementById('prev').style='visibility:visible';
+			//document.getElementById('next').style='visibility:visible';
+		}
+
+		function Start()
+		{
+			//Setting up periodic task
+			task=setInterval(LoadNext,5000);
+			//document.getElementById('prev').style='visibility:hidden';
+			//document.getElementById('next').style='visibility:hidden';
+		}
+
+		Start();	
+	</script>
+</body>
+</html>

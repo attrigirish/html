@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+	<script>
+		//Object
+		person=[
+		{
+			id:1,
+			name:'Girish Attri',
+			email:'girish@mail.com',
+			phone:'9560129011'
+		},
+		{
+			id:2,
+			name:'Sachin Jain',
+			email:'sachin@mail.com',
+			phone:'9898989898'
+		},
+		{
+			id:3,
+			name:'Ravi Verma',
+			email:'ravi@mail.com',
+			phone:'3220989898'
+		}
+
+		];
+
+		for(i=0;i<3;i++)
+		{
+
+		div=document.createElement('div');			//<div></div>
+
+		l1=document.createTextNode('Id : ');
+		span1=document.createElement('span'); 		//<span></span>
+		span1.innerHTML=person[i].id;				//<span>1</span>
+		br1=document.createElement('br');			//<br></br>
+
+		l2=document.createTextNode('Name : ');
+		span2=document.createElement('span'); 		
+		span2.innerHTML=person[i].name;				
+		br2=document.createElement('br');	
+
+		l3=document.createTextNode('Email : ');
+		span3=document.createElement('span'); 		
+		span3.innerHTML=person[i].email;				
+		br3=document.createElement('br');	
+
+		l4=document.createTextNode('Phone : ');
+		span4=document.createElement('span'); 		
+		span4.innerHTML=person[i].phone;			
+		br4=document.createElement('br');	
+
+		div.appendChild(l1);
+		div.appendChild(span1);
+		div.appendChild(br1);
+
+		div.appendChild(l2);
+		div.appendChild(span2);
+		div.appendChild(br2);
+
+		div.appendChild(l3);
+		div.appendChild(span3);
+		div.appendChild(br3);
+
+		div.appendChild(l4);
+		div.appendChild(span4);
+		div.appendChild(br4);
+
+		document.body.appendChild(div);
+
+		}
+
+	</script>
+</body>
+</html>
+
+

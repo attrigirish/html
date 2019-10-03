@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Event Listeners</h1>
+
+	<h1 id="heading">Changing the Style of an Element</h1>
+	<input class="btn" type="button" value="Red" >
+	<input class="btn" type="button" value="Green">
+	<input class="btn" type="button" value="Blue">
+
+
+	<script>
+		buttons=document.getElementsByClassName('btn');
+		for(i=0;i<3;i++)
+		{
+			buttons[i].addEventListener('click',function(){
+				document.getElementById('heading').style='color:'+this.value;
+			});
+		}
+	</script>
+</body>
+</html>

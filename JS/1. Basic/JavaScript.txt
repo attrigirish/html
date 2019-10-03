@@ -1,0 +1,523 @@
+JavaScript
+
+Javascript is client side scripting language. Javascript code is directly embedded into an HTML page. JavaScript makes a web developer to perform the following operations without sending a request to the web server:
+
+1. Changing the style of an element.
+2. Changing the content of en element.
+3. Changing the appearance of an element.
+4. Performing Arithmetic operations.
+5. Performing Data Validations.
+
+With JavaScript You cannot:
+
+1. Accessing Server Resources.
+2. Using Database Management Systems.
+
+
+
+Using JavaScript
+
+1. Inline
+
+<input type="button" onclick="statement(s)">
+
+2. Internal
+
+<head>
+<script>
+	statement(s)
+</script>
+</head>
+
+3. External Scripts
+
+
+
+
+
+JavaScript Basic
+
+JavaScript Data Types:
+----------------------
+
+A Data Types specifies the type of the value that a variable can store. 
+
+A. int    			12, 54032, 234234234, 0
+B. float 			32.0, 0.0, 356456456.5435345345
+C. text/string  	'Anki',"Ankit", "5 Kapil Vihar", "5345345345"
+D. boolean			true, false
+E. arrays
+F. objects
+
+
+Variables:
+----------
+
+A variable is a data store which is used to store program data.
+
+JavaScript is a dynamically typed programming language, in javascript you do not have declare the data type of a variable before using it. The data type of a variable is inferred automatically by the javascript.
+
+
+Syntax:
+
+<var-name>=<value>;
+
+
+e.g.
+
+
+a=5;			//int
+b=5.2;			//float
+c='Girish';		//String
+d="Girish";		//String
+e=true;			//boolean
+f=[1,2];		//array
+
+
+
+Operators in JavaScript
+
+An operator is a symbolic instructor that performs a specific operation.
+
+1. Arithmetic 
+
+A. 	+ 		e.g.		5+3	= 	8
+B.	-		e.g.		5-2	=	3
+C.	/		e.g.		5/2 =	2.5
+D.	*		e.g.		5*2	=	10
+E.	%		e.g.		5%2	=	1
+
+2. Relational
+
+A. 	>		e.g.		5>2		=	true
+B.	<		e.g.		5<2		=	false
+C.	>=		e.g.		5>=5	=	true
+D.	<=		e.g.		5<=2	=	false
+E.	==		e.g.		5==3	=	false
+F.	!=		e.g.		5!=3	=	true
+
+3. Logical
+
+A.	&&		(AND)	5>2 && 7<4 =	false
+B.	||		(OR)	5>2 || 7<4 =	true
+C.	!		(NOT)	!(5>2)	   = 	false	
+
+Logical operators are used to evaulate two or more relational expressions together. 
+
+Exp1 		Exp2 		Exp1&&Exp2			Exp1||Exp2
+
+false		false		false				false
+false		true		false				true
+true		false		false				true
+true		true		true				true
+
+4. Assignment
+
+A. 	=		a=5;		
+B.	+=		a+=10;			//a=a+10;
+C.	-=		a-=10;			//a=a-10;
+D.	/=		a/=10;			//a=a/10;
+E.	*=		a*=10;			//a=a*10;
+F.	%=		a%=10;			//a=a%10;
+
+5. Increment/Decrement
+
+
+
+A.	++		a++; or ++a;		a=a+1;
+B.	--		a--; or --a;		a=a-1;
+
+6. Conditional
+
+7. Text
+
+A.	+		(Concatenation)
+
+e.g.
+
+"Hello"+"World"		=	HelloWorld
+
+
+
+
+Conditional Statements in JavaScript
+
+1. if..else
+2. switch..case
+3. ?.:
+
+
+
+A. Simple if
+
+if(condition)
+{
+	//statement(s) to execute if condition is true
+}
+
+
+B. if . else		(For Two Condition only)
+
+if(condition)
+{
+	//statement(s) to execute if condition is true
+}
+else
+{
+	//statement(s) to execute if condition is false
+}
+
+
+C. if . else ladder		(For More than Two Conditions)
+
+if(condition1)
+{
+	//statement(s)
+}
+elseif(condition2)
+{
+	//statement(s)
+}
+elseif(condition3)
+{
+	//statement(s)
+}
+else
+{
+	//statement(s)
+}
+
+
+
+
+
+Looping Statements in JavaScript
+
+A loop is a programming statement that executes the given set of statement(s) for number of times until the specified condition becomes false.
+
+1. for
+2. while
+3. do while
+
+
+
+Syntax: for 	(Entry Controlled Loop : Best suited for situations where no. of iterations are known in advance).
+
+for(initialization;condition;updation)
+{
+	//statement(s)
+}
+
+
+e.g.
+
+
+//Write a loop expression to run it 10 times.
+
+for(i=1;i<=31;i++)
+{
+	
+}
+
+or
+
+for(i=31;i>=1;i--)
+{
+	
+}
+
+
+
+Syntax : while
+
+initialization;
+while(condition)
+{
+	...
+	updation
+}
+
+Syntax: do while
+
+initialization;
+do
+{
+	...
+	updation
+}while(condition);
+
+
+
+
+for(i=1;i<=100;i++)
+{
+	..
+}
+
+--------
+
+i=1;
+while(i<=100)
+{
+	..
+	i++;
+}
+
+------
+
+i=1;
+do
+{
+	..
+	i++;
+}while(i<=100);
+
+
+
+
+
+
+--------------------------------------
+
+
+Arrays
+
+An array is a collection of elements.
+
+
+Syntax:
+
+var=Array(value1,value2,value3,....,valueN);
+or
+var=[value1,value2,value3,....valueN];
+
+e.g
+
+months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+
+
+---------------------------------------
+
+
+Functions
+
+A function is a subprogram that performs a specific task. Function gives modularity to the application where different tasks can be defined in separate modules. Each module or function in an application can be designed and/or tested separately and then integrated to the main application.
+
+Advantages of Functions
+
+- Easy Debugging
+- Improved Readability
+- Modularity
+- Reusability
+
+
+Why Functions?
+
+
+function <function-name>(<parameters>)
+{
+	//function-defition
+}
+
+e.g.
+
+
+1. Function Definition
+2. Function Signature
+3. Function Call
+
+
+Types of Functions
+
+1. Built In (Pre-Defined)
+	getElementById()
+	getAttribute()
+	setAttribute()
+
+	
+2. User Defined
+
+Syntax:
+
+function <function-name>()
+{
+	//body
+}
+
+
+
+
+
+JavaScript Objects
+
+A javascript object is a collection of key value pair data structures. 
+
+
+Declaration:
+
+obj={
+	key=value;
+	key=value;
+	key=value;
+}
+
+
+
+
+BOM (Browser Object Model)
+
+The Browser Object Model (BOM) is a browser-specific convention referring to all the objects exposed by the web browser. Unlike the Document Object Model, there is no standard for implementation and no strict definition, so browser vendors are free to implement the BOM in any way they wish.
+
+The top level of the hierarchy is the window object, which contains the information about the window displaying the document. Some of the window object are objects themselves that describe the document and related information.
+
+
+- window (top level object)
+- document
+- history
+- screen
+- naviator
+- location
+
+
+
+
+window object
+--------------
+
+The window object represents an open window in a browser. window object is a global object in javascript. Any variable or function added in javascript code becomes a property of global window object.
+
+e.g.
+
+a=5;		
+is similar to
+window.a=5;
+
+
+window object function/methods
+
+1. open()
+
+e.g.
+
+window.open();		//open();
+
+2. close()
+
+3. alert()
+4. prompt()
+5. confirm()
+
+6. setInterval()
+7. clearInterval()
+
+8. setTimeout()
+9. clearTimeout()
+
+10. scrollTo()
+
+
+
+window Properties
+
+1. innerHeight
+2. innerWidth
+3. outerHeight
+4. outerWidth
+5. pageXOffset
+6. pageYOffset
+
+
+screen object
+--------------
+
+The JavaScript screen object holds information of browser screen. It can be used to display screen width, height, colorDepth, pixelDepth etc.
+
+
+1. width
+2. height
+3. availHeight
+4. availWidth
+5. colorDepth
+6. pixelDepth
+
+
+history object
+--------------
+
+The JavaScript history object holds information of browsing history. It can be used to navigate user to previous or next page.
+
+Properties:
+
+1. length
+
+
+Functions:
+
+1. back
+2. forward
+3. go
+
+
+navigator object
+----------------
+
+The navigator object contains information about the browser/client.
+
+
+1. appCodeName
+2. appName
+3. appVersion
+4. cookieEnabled
+5. geolocation
+6. language
+7. onLine
+8. platform
+9. product
+10. userAgent
+
+
+location object
+----------------
+
+The location object contains information about the current 
+URL.
+
+Location Properties:
+
+1. hash
+2. host
+3. hostname
+4. href
+5. origin
+6. pathname
+7. port
+8. protocol
+9. search
+
+
+http://www.dummy.com/folder/mypage.html#name?id=3
+
+
+Location Functions:
+
+1. assign()
+2. reload()
+3. replace()
+
+
+
+
+Browser Object Model
+
+window
+screen
+history
+navigator
+location
+
+
+Document Object Model
+
+document
+

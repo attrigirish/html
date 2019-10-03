@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body
+		{
+			background-image:url('../images/google.png');
+		}
+	</style>
+</head>
+<body>
+	Height : <span id="a"></span> <br>
+	Width : <span id="b"></span> <br>
+	Avialable Height : <span id='c'></span> <br>
+	Available Width : <span id='d'></span> <br>
+	Color Depth : <span id='e'></span> <br>
+	Pixel Depth : <span id='f'></span> <br>
+	<script>
+		document.getElementById('a').innerHTML=screen.height;
+		document.getElementById('b').innerHTML=screen.width;
+		document.getElementById('c').innerHTML=screen.availHeight;
+		document.getElementById('d').innerHTML=screen.availWidth;
+		document.getElementById('e').innerHTML=screen.colorDepth;
+		document.getElementById('f').innerHTML=screen.pixelDepth;
+	</script>
+
+
+</body>
+</html>

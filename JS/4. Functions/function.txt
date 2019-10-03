@@ -1,0 +1,108 @@
+Function : A function is a program entity which is used to define a piece that you wanted to execute more than once.
+
+Program Logic to Calculate Factorial of a Number
+
+
+n!
+
+fac=1;
+for(i=1;i<=n;i++)
+{
+	fac=fac*i
+}
+
+
+m!+n!/p!
+
+Without Function
+
+mfac=1;
+for(i=1;i<=m;i++)
+{
+	mfac=mfac*i;
+}
+
+nfac=1;
+for(i=1;i<=n;i++)
+{
+	nfac=nfac*i;
+}
+
+pfac=1;
+for(i=1;i<=n;i++)
+{
+	pfac=pfac*i;
+}
+
+result=mfac+nfac/pfac
+
+
+
+With Function
+
+function Factorial(x)
+{
+	fac=1;
+	for(i=1;i<=x;i++)
+	{
+		fac=fac*i;
+	}
+	return fac;
+}
+
+result=Factorial(m)+Factorial(n)/Factorial(p);
+
+
+
+Declaration of A function.
+
+function <function-name>(<parameters>)
+{
+	function-body
+}
+
+
+
+e.g.
+
+function Sum(a,b)
+{
+	result=a+b;
+	return result;
+}
+
+
+Write a function to calculate Simple Interest.
+
+function Interest(p,r,t)
+{
+	result=p*r*t/100;
+	return result;
+}
+
+
+
+Function Types:
+
+1. Function without Parameters and No Return Value
+	e.g.
+	To Perform some predefined action. 
+		- print a pre specified message.
+		- change the theme of the page.
+		- change the style of the page.
+
+2. Function without Parameters and With Return Value
+	e.g
+	To fetch some data from a data source.
+
+3. Function with Parameters and No Return Value.
+	e.g.
+	To Save some data in a database.	
+
+4. Function with Parameters and Return Value.
+	e.g.
+	To perform some computation on the data.
+	
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="person">
+		ID : <span id="id"></span> <br>
+		Name : <span id="name"></span> <br>
+		Email : <span id="email"></span> <br>
+		Phone : <span id="phone"></span> <br>
+	</div>
+
+
+	<script>
+		//Object
+		person={
+			id:1,
+			name:'Girish Attri',
+			email:'girish@mail.com',
+			phone:'9560129011'
+		};
+
+		document.getElementById('id').innerHTML=person.id;
+		document.getElementById('name').innerHTML=person.name;
+		document.getElementById('email').innerHTML=person.email;
+		document.getElementById('phone').innerHTML=person.phone;
+
+	</script>
+</body>
+</html>
+
+

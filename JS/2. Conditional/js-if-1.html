@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.toggle
+		{
+			width:200px;
+			height:60px;
+			border-radius: 50px;
+			border:2px solid black;
+		}
+
+		.on
+		{
+			background-color: lightgreen;
+		}
+
+		.off
+		{
+			background-color:red;
+		}
+
+		.toggle-switch
+		{
+			display: block;
+			height:40px;
+			width:40px;		
+			border-radius: 50%;
+			background-color: inherit;	
+			border:2px solid white;
+			margin:10px;
+		}
+
+		.toggle-name
+		{
+			display: block;
+			height:40px;
+			margin:10px;
+			width:90px;
+			color:white;
+			text-align: center;
+			font-size:30px;
+			padding-top:5px;
+			box-sizing: border-box;
+		}
+
+		.on .toggle-name
+		{
+			float:right;
+		}
+
+		.off .toggle-name
+		{
+			float:left;
+		}
+
+		.on .toggle-switch
+		{
+			float:left;
+		}
+
+		.off .toggle-switch
+		{
+			float:right;
+		}
+	</style>
+
+	<script>
+		function Toggle()
+		{
+			if(document.getElementById('wifi').getAttribute('class')=="toggle off")
+			{
+				document.getElementById('wifi').setAttribute('class','toggle on');						
+				document.getElementById('wifi-state').innerHTML='ON';
+
+			}
+			else
+			{
+				document.getElementById('wifi').setAttribute('class','toggle off');					
+				document.getElementById('wifi-state').innerHTML='OFF';
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<div id="wifi" class="toggle off" onclick="Toggle();">
+		<span class="toggle-switch"></span>
+		<span id="wifi-state" class="toggle-name">OFF</span>
+	</div>
+</body>
+</html>

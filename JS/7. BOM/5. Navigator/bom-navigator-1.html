@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	appCodeName : <span id="appCodeName"></span> <br>
+	appName : <span id="appName"></span> <br>
+	appVersion : <span id="appVersion"></span> <br>
+	cookieEnabled : <span id="cookieEnabled"></span> <br>
+	geolocation : <span id="geolocation"></span> <br>
+	language : <span id="language"></span> <br>
+	onLine : <span id="onLine"></span> <br>
+	platform : <span id="platform"></span> <br>
+	product : <span id="product"></span> <br>
+	userAgent : <span id="userAgent"></span> <br>
+
+	<script>
+		document.getElementById('appCodeName').innerHTML=navigator.appCodeName;
+		document.getElementById('appName').innerHTML=navigator.appName;
+		document.getElementById('appVersion').innerHTML=navigator.appVersion;
+		document.getElementById('cookieEnabled').innerHTML=navigator.cookieEnabled;
+		document.getElementById('language').innerHTML=navigator.language;
+		document.getElementById('onLine').innerHTML=navigator.onLine;
+		document.getElementById('platform').innerHTML=navigator.platform;
+		document.getElementById('product').innerHTML=navigator.product;
+		document.getElementById('userAgent').innerHTML=navigator.userAgent;
+	</script>
+</body>
+</html>

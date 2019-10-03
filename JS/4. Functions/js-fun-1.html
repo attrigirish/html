@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="heading">Changing the Style of an Element</h1>
+	<input type="button" value="Red" onclick="ChangeColor('Red');">
+	<input  type="button" value="Green" onclick="ChangeColor('Green');">
+	<input type="button" value="Blue" onclick="ChangeColor('Blue');">
+
+	<script>
+		function ChangeColor(color)
+		{
+			document.getElementById('heading').style='color:'+color;
+		}
+	</script>
+
+</body>
+</html>

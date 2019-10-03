@@ -1,0 +1,51 @@
+BOM : Browser Object Model
+
+The browser object model (BOM) is a hierarchy of browser objects that are used to manipulate methods and properties associated with the Web browser itself. Objects that make up the BOM include the window object, navigator object, screen object, history, location object, and the document object. The Document Object consists of objects that are used to manipulate methods and properties of the document or Web page loaded in the browser window. The document object represents the Web page currently loaded in the browser window. Each HTML element or tag that makes up the document is also considered an object. It is not necessary to explicitly create any of the objects that make up the browser object model. The objects are automatically created when a Web browser opens a Web page.
+
+
+Browser Object Model 
+	- window
+	- document
+	- navigator
+	- history
+	- screen
+	- location
+
+
+window Object
+
+The top level object in the BOM is the window object. The window object represents the browser window. All other browser objects are contained within the window object. The window object includes a number of properties and methods that can be used to control the Web browser. 
+
+a=5;
+
+or
+
+window.a=5;
+
+
+window Properties:
+
+1. document (object)
+2. navigator (object)
+3. screen (object)
+4. history (object)
+5. location (object)
+6. name
+7. pageXOffset
+8. pageYOffset
+9. innerWidth
+10. outerWidth
+
+
+window Methods:
+
+1. alert
+2. prompt
+3. confirm
+4. setInterval
+5. clearInterval
+6. setTimeout
+7. clearTimeout
+8. open
+9. close
+10. scrollTo

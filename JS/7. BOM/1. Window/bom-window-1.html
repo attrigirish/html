@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Opening and Closing Windows</h1>
+
+	<input type="button" value="Open Child Window" onclick="OpenChild();">
+	<input type="button" value="Close Child Window" onclick="CloseChild();">
+	<input type="button" value="Close Current Window" onclick="CloseCurrent();">
+
+	<script>
+		function OpenChild()
+		{
+			c=window.open('http://www.google.com');
+		}
+
+		function CloseChild()
+		{
+			c.close();
+		}
+
+		function CloseCurrent()
+		{
+			window.close();
+		}
+	</script>
+</body>
+</html>

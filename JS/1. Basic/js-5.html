@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+
+
+		#news-box
+		{
+			border:1px solid black;
+			height:400px;
+			width:300px;
+			background-color: lightgray;
+		}
+
+		#menu-row
+		{
+			height:40px;
+			background-color: orange;
+		}
+
+		#menu-row  .btn
+		{
+			font-family: calibri;
+			margin:0px;
+			width:33%;
+			height:100%;
+			float:left;
+			padding-top: 12px; 
+			text-align:center;
+			color:white;
+			box-sizing: border-box;
+			border-right:1px solid black;
+		}
+
+		#menu-row div:last-child
+		{
+			border-right-style:none;
+			border-width: 0px;
+		}
+
+		.btn:hover
+		{
+			background-color:lightgray;
+		}
+
+		#news{
+			padding:20px;
+			height:360px;
+			box-sizing: border-box;
+		}
+
+		#news img
+		{
+			width:100%;
+			height:100%;
+		}
+
+	</style>
+
+
+	<script>
+		function LoadPicture1()
+		{
+			document.getElementById('image').src="../images/banner-1.jpg";
+		}
+
+		function LoadPicture2()
+		{
+			document.getElementById('image').src="../images/banner-2.jpg";
+		}
+
+		function LoadPicture3()
+		{
+			document.getElementById('image').src="../images/banner-3.jpg";
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<h1>Changing the content of an Element</h1>
+
+	<div id="news-box">
+		<div id="menu-row">
+			<div class="btn" onclick="LoadPicture1();">
+				Picture 1
+			</div>
+			<div class="btn" onclick="LoadPicture2();">
+				Picture 2
+			</div>
+			<div class="btn" onclick="LoadPicture3();">
+				Picture 3
+			</div>
+		</div>
+		<div id=news>
+			<img id="image" src="../images/banner-1.jpg">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Opening and Closing Windows</h1>
+
+	<input type="button" value="Alert Dialog" onclick="AlertDialog();">
+	<input type="button" value="Prompt Dialog" onclick="PromptDialog();">
+	<input type="button" value="Confirm Dialog" onclick="ConfirmDialog();">
+
+	<script>
+		function AlertDialog()
+		{
+			/*
+				alert(message) : To Display an alert message to the user. This window does not return any value.
+			*/
+			alert('Hello From JavaScript');
+		}
+
+		function PromptDialog()
+		{
+			/*
+				prompt(message) : To accept input from the user. This dialog returns the value entered by the user, else returns an empty string.
+			*/
+			value=prompt('Enter Your Name : ');
+		}
+
+		function ConfirmDialog()
+		{
+			/*
+				confirm(message) : To take consent from user before performing any important task. This dialog box returns either true or false.
+			*/
+			value=confirm('Do you want to close this page:');
+			if(value==true)
+			{
+				window.close()
+			}
+		}
+	</script>
+</body>
+</html>
