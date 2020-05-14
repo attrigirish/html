@@ -1,0 +1,190 @@
+Bootstrap Classes
+
+1. Bootstrap Layouts
+
+
+A. Containers
+
+Containers are the most basic layout element in Bootstrap and are required when using bootstrap's default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+
+Container Classes
+-----------------
+
+I 	.container
+II	.container-fluid
+
+e.g.
+
+<div class="container">..</div>
+
+<div class="container-fluid">..</div>
+
+
+B. Grids
+
+Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive.
+
+Grid Class(es)
+-------------
+
+I. 	.row
+I 	.col-#				Extra Small 		<576px
+II	.col-sm-# 			Small  				>=576px
+III .col-md-# 			Medium 				>=768px
+V	.col-lg-# 			Large 				>=992px
+VI 	.col-xl-# 			Extra Large         >=1200px
+
+
+<div class="col-sm-12 col-lg-6">..</div>
+
+Small             	12
+Medium				12
+Large 				6
+Extra Large			6
+
+
+<div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">..</div>
+
+Extra Small 		12
+Small 				10
+Medium 				8
+Large 				6
+Extra Large 		4
+
+<div> .. </div>
+
+Extra Small 		12
+Small				12
+Medium 				12
+Large				12
+Extra Large 		12		
+
+
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4"></div>
+	<div class="col-md-4"></div>
+</div>		
+
+Extra Small 		12
+Small 				12
+Medium				4
+Large 				4
+Extra Large 		4
+
+
+
+Page Structure
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-8"></div>
+	</div>
+	<div class="row">
+	</div>
+	<div class="row">
+	</div>
+	<div class="row">
+	</div>
+</div>
+
+
+Nested Grids
+
+<div class="col-md-3">					25%
+	<div class="col-md-4">				10%
+		<div class="col-md-6"></div>	5%
+		<div class="col-md-6"></div>	5%
+	</div> 		
+	<div class="col-md-8"></div>		15%
+</div>
+
+
+
+2. Typography
+
+Bootstrap sets basic global display, typography, and link styles.
+
+
+A. Heading
+
+Bootstrap applies a default style to all heading elements from h1 to h6.
+
+I 		.text-muted
+II 		.display-1 to .display-4
+
+
+B. Paragraph
+
+Bootstrap applies a default style to the paragraph element. However to customize the paragraphs following bootstrap classes can be used:
+
+I		.lead
+
+C. BlockQuote
+
+I 		.blockquote
+II 		.blockquote-footer
+
+
+
+3. Tables
+
+Bootstrap provides classes to customize the look and feel of HTML tables. The bootstrap classes to customize tables are:
+
+I 		.table
+II      .table-bordered
+III     .table-hovered
+IV      .table-striped
+V  		.table-dark
+VI 		.table-borderless
+VII 	.table-sm
+
+
+Heading Classes
+
+I 		.thead-dark
+II 		.thead-light 
+
+
+Contextual Classes
+
+I 		.table-active
+II 		.table-primary
+III		.table-secondary
+IV		.table-success
+V 		.table-danger
+VI 		.table-warning
+VII 	.table-info
+VIII 	.table-light
+IX 		.table-dark
+
+
+4. Lists
+
+Bootstrap list classes let's you customize the appearance of a list. Bootstrap list classes include:
+
+List Classes
+
+I  		.list-unstyled
+II 		.list-inline
+
+List Item Classes
+
+I 		.list-inline-item
+
+
+5. Images
+
+I 		.img-fluid
+II 		.img-thumbnail
+III 	.float-left
+IV 		.float-right
+V 		.rounded
+
+
+6. Figures
+
+I 		.figure
+II 		.figure-img
+III 	.figure-caption
