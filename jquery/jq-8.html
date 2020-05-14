@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	<style>
+		input{
+			width:100%;
+			font-size:18px;
+			padding:5px;
+			border-radius: 10px;
+		}
+
+		.invalid{
+			border-left:10px solid red;
+		}
+	</style>
+</head>
+<body>
+	<h2>DOM Manipulation : CSS Class</h2>
+	<input class="invalid" type="name" id="name" oninput="Validate();">
+
+	<script>
+		function Validate()
+		{			
+			if($("#name").val()==""){
+				$("#name").toggleClass();
+			}
+		}
+	</script>
+</body>
+</html>

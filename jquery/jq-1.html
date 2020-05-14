@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h1>Accessing DOM in JavaScript</h1>
+	<p id="para">Jack & Jill went up the hill</p>
+
+	<input type="button" value="Red" onclick="ChangeRed();">
+	<input type="button" value="Blue" onclick="ChangeBlue();">
+
+	<script>
+		function ChangeRed(){
+			$('#para').css('color','red').css('font-size','30px');
+		}
+
+		function ChangeBlue(){
+			$('#para').css('color','blue').css('font-size','30px');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	<style>
+		input{
+			width:100%;
+			font-size:18px;
+			padding:5px;
+			border-radius: 10px;
+		}
+
+		.neutral{
+			border-left:10px solid gray;
+		}
+
+		.valid{
+			border-left:10px solid green;
+		}
+
+		.invalid{
+			border-left:10px solid red;
+		}
+	</style>
+</head>
+<body>
+
+	<input class="neutral" type="name" id="name" oninput="Validate();">
+
+	<script>
+		function Validate()
+		{
+			if($("#name").val()!=""){
+				$("#name").removeClass("neutral invalid");
+				$("#name").addClass("valid");
+			}
+			else
+			{
+				$("#name").removeClass("neutral valid");
+				$("#name").addClass("invalid");				
+			}
+		}
+	</script>
+</body>
+</html>

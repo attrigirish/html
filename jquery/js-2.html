@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Accessing DOM in JavaScript</h1>
+	<p>Para 1</p>
+	<p>Para 2</p>
+	<p>Para 3</p>
+	<p>Para 4</p>
+	<p>Para 5</p>
+
+	<input type="button" value="Red" onclick="ChangeRed();">
+	<input type="button" value="Blue" onclick="ChangeBlue();">
+
+	<script>
+		function ChangeRed(){
+			paras=document.getElementsByTagName('p');
+			for(i=0;i<paras.length;i++){
+				paras[i].style.color='red';
+			}
+		}
+
+		function ChangeBlue(){
+			paras=document.getElementsByTagName('p');
+			for(i=0;i<paras.length;i++){
+				paras[i].style.color='blue';
+			}
+		}
+	</script>
+</body>
+</html>

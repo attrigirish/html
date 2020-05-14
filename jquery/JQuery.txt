@@ -1,0 +1,247 @@
+JQuery
+
+JQuery is a javascript library which runs on the client computer. JQuery provides a host of functions to perform the tasks on the client end. JQuery saves front end developers from writing complex javascript functions/logics. 
+
+
+
+JavaScript V/s Jquery
+
+# DOM Traversal
+
+***********By ID**************
+
+HTML
+
+<p id="para">...</p>
+
+CODE
+
+document.getElementById('para'); 		//JS
+
+$('#para');								//JQ
+
+
+**********By Tag*************
+
+HTML
+
+<p>...</p>
+<p>...</p>
+
+CODE
+
+document.getElementsByTagName('p'); 		//JS
+$('p');										//JQ
+
+
+**********By Class Name*************
+
+HTML
+
+<div class="product">...</p>
+<div class="product">...</p>
+
+CODE
+
+document.getElementsByClassName('product'); 		//JS
+$('.product');										//JQ
+
+
+
+#DOM Manpulation (CSS Style)
+
+HTML
+
+<p id="para">...</p>
+
+CODE
+
+document.getElementById('para').style="color:red"; 		//JS
+$('#para').css('color','red');							//JQ
+
+
+!To Change Multiple Styles Together
+
+
+para=document.getElementById('para');
+para.style.color="red"; 								//JS
+para.style.fontSize='30px';
+
+$('#para').css('color','red').css('font-size','30px');		//JQ
+
+
+!To Change Style of Multiple Elements
+
+HTML
+
+<p>Para 1</p>
+<p>Para 2</p>
+<p>Para 3</p>
+<p>Para 4</p>
+<p>Para 5</p>
+
+CODE
+
+paras=documents.getElementsByTagName('p');		//JS
+for(i=0;i<paras.length;i++){
+	paras[i].style.color='red';
+}
+
+$('p').css('color',red');
+
+
+
+#DOM Manpulation (Visibility)
+
+HTML
+
+<p id="para">...</p>
+
+CODE
+
+document.getElementById('para').style.visibility:'hidden'; 		//JS
+document.getElementById('para').style.visibility:'visible'; 	//JS
+
+$('#para').hide();											//JQ
+$('#para').show();											//JQ
+
+$('#para').fadeOut();											//JQ
+$('#para').fadeIn();											//JQ
+
+
+#DOM Manipulation (Content)
+
+<div id="topic">
+</div>
+
+
+document.getElementById('topic').innerHTML='Sports';  //JS
+document.getElementById('topic').innerHTML='Movies';
+
+#To Change the content of an element 
+
+$('#p').html('Sports'); 							//JQ
+$('#p').html('Movies');
+
+#To get the value of an element
+
+$('#p').html();
+
+
+#DOM Manipulation (Attributes)
+
+<img id="image" src="" height="200px" width="200px">
+
+document.getElementById('image').src='image1.jpg';  //JS
+document.getElementById('image').src='image2.jpg';
+
+#To Change the content of an element 
+
+$('#image').attr('src','image1.jpg'); 			//JQ
+$('#image').attr('src','image2.jpg')
+
+#To get the value of an attribute
+
+$('#image).attr('src');
+
+
+
+#Working with Form Values
+
+html
+-----
+<input type="text" id="price">
+
+
+code
+-----
+
+price=document.getElementById('price').value;	//JS
+
+price=$('#price').val(); 						//JQ
+
+#To Assign a Value
+
+$('#price').val(50);
+
+
+
+
+Jquery So Far...
+
+1. css()
+2. show(), hide(), fadeIn(), fadeOut()
+3. html()
+4. attr()
+5. val()
+6. addClass(), removeClass(), toggleClass()
+7. append(), appendTo(), prepend(), prependTo()
+8. after(), before(), insertAfter(), insertBefore()
+
+
+
+
+
+
+append V/s appendTo
+
+
+$(target).append(source);
+$(source).appendTo(target);
+
+$(target).prepend(source);
+$(source).prependTo(target);
+
+$(target).after(source)
+$(source).insertAfter(target)
+
+$(target).before(source)
+$(source).insertBefore(target)
+
+
+
+JQuery Events
+
+Biding Events with bind() function
+
+$('#control').bind('click',function(){});
+$('#control').bind('change',function(){});
+$('#control').bind('input',function(){});
+
+Binding Events with click(), change(), blur() functions
+
+$('#control').click(function(){});
+$('#control').change(function(){});
+$('#control').input(function(){});
+
+
+
+AJAX Programming in JQuery
+
+A. ajax
+
+Syntax:
+
+ajax(url, settings)
+
+
+$.ajax(url).done().fail();
+
+
+
+
+B. post
+
+post(url, data)
+
+C. get
+
+get(url, data)
+
+D. delete
+
+delete(url)
+
+E. put
+
+put(url, data)

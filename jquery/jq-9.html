@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h1>DOM Manipulation : Append(), AppendTo(), Prepend(), PrependTo(), HTML()</h1>
+
+
+	<div id="news">
+		<p id="article1">Article 1</p>
+		<p id="article2">Article 2</p>
+		<p id="article3">Article 3</p>
+	</div>
+
+
+	<input type="text" id="id">
+	<input type="text" id="name">
+	<input type="text" id="age">
+	<input type="button" value="Add" onclick="AddProfile();">
+
+	<table id="profiles" border="1" width="300px"> 
+		<thead>
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Age</td>
+		</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+
+	<div style="display: flex;width:100%">
+		<div id="cities" style="width:33.33%">
+			<p>New Delhi</p>
+			<p>Chennai</p>
+			<p>Kolkata</p>
+		</div>
+		<div  style="width:33.33%">
+			<input type="button" value="Select" onclick="SelectCities()">
+		</div>
+		<div id="selectedcities"  style="width:33.33%">
+		</div>
+	</div>
+
+
+	<script>
+		a4=document.createElement('p');
+		a4.innerHTML='Article 4';
+		//document.getElementById('news').append(a4);
+		$('#news').append(a4);
+
+		a5=document.createElement('p');
+		a5.innerHTML='Article 5';
+		$('#news').prepend(a5);
+
+
+		function AddProfile()
+		{
+			/*
+			tr=document.createElement('tr');
+
+			td_id=document.createElement('td');
+			td_name=document.createElement('td');
+			td_age=document.createElement('td');
+
+			td_id.innerHTML=$('#id').val();
+			td_name.innerHTML=$('#name').val();
+			td_age.innerHTML=$('#age').val();
+
+			tr.append(td_id);
+			tr.append(td_name);
+			tr.append(td_age);
+
+			$('#profiles tbody').prepend(tr);
+			*/
+
+			$('#profiles tbody').prepend(
+					'<tr>'+
+						'<td>'+$('#id').val()+'</td>'+
+						'<td>'+$('#name').val()+'</td>'+
+						'<td>'+$('#age').val()+'</td>'+
+					'</tr>'
+				);
+		}
+
+		function SelectCities(){
+			//$('#cities p').appendTo('#selectedcities');
+			$('#selectedcities').append('#cities p');
+		}
+	</script>
+
+</body>
+</html>

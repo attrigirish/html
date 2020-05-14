@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input type="text" id="first">
+	<input type="text" id="second">
+	<input type="button" value="Add" onclick="Add();">
+
+	<h2 id="result"></h2>
+
+	<script>
+		function Add()
+		{
+			first=$("#first").val();
+			second=$("#second").val();
+			result=Number(first)+Number(second);
+
+			$("#result").html(result);
+		}
+	</script>
+</body>
+</html>

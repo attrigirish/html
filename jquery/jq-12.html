@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body{
+			height:10000px;
+		}
+
+		#info-box{
+			position: fixed;
+			top:100px;
+			left:100px;
+			width:300px;
+			height:200px;
+			background-color:orange;
+			padding:20px;
+			box-sizing: border-box;
+			border:5px solid black;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h2>DOM Manipulation - Style Properties</h2>
+
+	<div id="info-box">
+	</div>
+
+	<script>
+		
+		$('#info-box').outerWidth(400);
+
+
+		height=$('#info-box').height();
+		width=$('#info-box').width();
+		innerheight=$('#info-box').innerHeight();
+		innerwidth=$('#info-box').innerWidth();
+		outerheight=$('#info-box').outerHeight();
+		outerwidth=$('#info-box').outerWidth();		
+
+
+		$('#info-box').append('Height : ' + height + "<br>");
+		$('#info-box').append('Width : ' + width + "<br>");
+		$('#info-box').append('Inner Height : ' + innerheight + "<br>");
+		$('#info-box').append('Inner Width : ' + innerwidth + "<br>");
+		$('#info-box').append('Outer Height : ' + outerheight + "<br>");
+		$('#info-box').append('Outer Width : ' + outerwidth + "<br>");
+
+
+	</script>
+</body>
+</html>

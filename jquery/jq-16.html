@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	<style>
+		#catalog{
+			display: flex;
+		}
+
+		#catalog div{
+			padding:20px;
+			border:1px solid black;
+			margin:10px;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="button" onclick="Login()" value="Login">
+	<input type="button" onclick="Logout()" value="Logout">
+
+
+	<div id="catalog">
+	</div>
+
+	<script>
+		products=[
+			{'name':'Note 8 Pro','brand':'Redmi','price':'14999'},
+			{'name':'Galaxy S 20','brand':'Samsung','price':'67000'},
+			{'name':'Galaxy A21','brand':'Samsung','price':'37000'},
+			{'name':'Iphone 11','brand':'Apple','price':'93000'}
+		];
+
+		for(i=0;i<products.length;i++){
+			$('#catalog').append('<div>' +
+					'<p>'+products[i].name+'</p>' +
+					'<p>'+products[i].brand+'</p>' +
+					'<p>'+products[i].price+'</p>' +
+					'<input class="cart-btn" type="button" value="Add To Cart">' +
+				'</div>');
+		}
+
+
+		function AddCart(){
+			alert('Button Clicked');
+		}
+
+
+		function Login(){
+			$('.cart-btn').click(AddCart);
+		}
+
+		function Logout(){
+			$('.cart-btn').unbind('click',AddCart);
+		}
+	</script>
+</body>
+</html>

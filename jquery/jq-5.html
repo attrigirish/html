@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h1>DOM Manipulation - Changing Attribute of an Element</h1>
+	<img id="mobile" src="" height="300px" width="180px"> 
+
+	<input type="button" value="Motorola" onclick="$('#mobile').attr('src','motorola.jpeg')">
+	<input type="button" value="Samsung" onclick="$('#mobile').attr('src','samsung.jpeg')">
+	<input type="button" value="Display Present URL" onclick="alert($('#mobile').attr('src'));">
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body{
+			height:10000px;
+		}
+
+		#info-box{
+			position: fixed;
+			top:100px;
+			left:100px;
+			width:300px;
+			height:200px;
+			background-color:orange;
+			padding:20px;
+			box-sizing: border-box;
+			border:5px solid black;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h2>Effects - Basic</h2>
+
+	<h3>Sliding Effects</h3>
+	<img id="image1" src="samsung.jpeg" style="width:200px;height:300px"><br>
+	<input type="button" value="Slide Up" onclick="$('#image1').slideUp();">
+	<input type="button" value="Slide Down" onclick="$('#image1').slideDown();">
+	<input type="button" value="Slide Toggle" onclick="$('#image1').slideToggle();">
+
+
+	<h3>Fade Effects</h3>
+	<img id="image2" src="samsung.jpeg" style="width:200px;height:300px"><br>
+	<input type="button" value="Fade In" onclick="$('#image2').fadeIn(5000)">
+	<input type="button" value="Fade Out" onclick="$('#image2').fadeOut(5000)">
+	<input type="button" value="Fade Toggle" onclick="$('#image2').fadeToggle();">
+	<input type="button" value="Fade To 0.5" onclick="$('#image2').fadeTo('slow',0.2);">
+
+
+
+	<h3>Show/Hide</h3>
+	<img id="image3" src="samsung.jpeg" style="width:200px;height:300px"><br>
+	<input type="button" value="Show" onclick="$('#image3').show();">
+	<input type="button" value="Hide" onclick="$('#image3').hide();">
+	<input type="button" value="Toggle" onclick="$('#image3').toggle();">
+</body>
+</html>

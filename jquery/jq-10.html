@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div>
+		<p id="article1">Article 1</p>
+		<p id="article2">Article 2</p>
+		<p id="article3">Article 3</p>
+	</div>
+
+	<script>
+		/*
+		a4=document.createElement('p');
+		a4.innerHTML='Article 4';
+		*/
+		$('#article2').before('<p>Article 4</p>');
+
+		/*
+		a5=document.createElement('p');
+		a5.innerHTML='Article 5';
+		*/
+		$('#article2').after('<p>Article 5</p>');
+	</script>
+</body>
+</html>

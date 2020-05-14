@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#news{
+			display: flex;
+		}
+		
+		.article{
+			width:32.33%;
+			box-sizing: border-box;
+			margin:1%;
+			background-color:orange;
+			height:200px;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h1>DOM Manipulation - Removing Elements</h1>
+
+	<div id="news">
+		<div class="article" id="article1">Article 1</div>
+		<div class="article" id="article2">Article 2</div>
+		<div class="article" id="article3">Article 3</div>
+	</div>
+
+	<script>
+		//Empty
+		$('#article2').empty();
+
+		//Remove
+		$('#article1').remove();
+
+		//Detach
+		article3=$('#article3').detach();
+		$('#news').prepend(article3);
+
+		//Unwrap
+		$('#news').unwrap();
+
+		//How to delete all articles?
+		$('.article').remove();
+	</script>
+</body>
+</html>
