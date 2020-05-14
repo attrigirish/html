@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		b{
+			display:block;
+			padding:4px;
+			height:50px;
+		}
+
+		.ex1 li{
+			display:inline;
+			width:30%;
+		}
+
+		.ex2 li{
+			display:inline-block;
+			padding:10px;
+			width:30%;
+		}
+
+		.ex3{
+			display:none;
+			height:400px;
+		}
+
+		.table{
+			display:table;
+		}
+
+		.table-row{
+			display:table-row;
+		}
+
+		.table-cell{
+			display:table-cell;
+			padding:10px;
+			border:1px solid black;
+		}
+
+		.flex1{
+			display:flex;
+		}
+
+		.flex1 div{
+			width:25%;
+		}
+
+		.flex2{
+			display:flex;
+			flex-direction: column;
+		}
+
+		.flex2 div{
+			width:25%;
+		}
+
+
+		.flex3{
+			display:flex;
+			flex-direction: row-reverse;
+		}
+
+		.flex3 div{
+			width:25%;
+		}
+
+		.flex4{
+			display:flex;
+			flex-direction: column-reverse;
+		}
+
+		.flex4 div{
+			width:25%;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<h3>Display : Block</h3>
+		<b>Text 1</b>
+		<b>Text 2</b>
+	</div>
+
+	<div>
+		<h3>Display : Inline</h3>
+		<ul class="ex1">
+			<li>Block 1</li>
+			<li>Block 2</li>
+			<li>Block 3</li>
+		</ul>
+	</div>
+
+	<div>
+		<h3>Display : Inline Block</h3>
+		<ul class="ex2">
+			<li>Block 1</li>
+			<li>Block 2</li>
+			<li>Block 3</li>
+		</ul>
+	</div>
+
+	<div>
+		<h3>Display : None</h3>
+		<p class="ex3">Hidden Element</p>
+		<p>After Hidden Element</p>
+	</div>
+
+	<div>
+		<h3>Display : table|table-row|table-cell
+		<div class="table">
+			<div class="table-row">
+				<div class="table-cell">
+					Cell 1
+				</div>
+				<div class="table-cell">
+					Cell 2
+				</div>
+			</div>
+			<div class="table-row">
+				<div class="table-cell">
+					Cell 3
+				</div>
+				<div class="table-cell">
+					Cell 4
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h3>Display : Flex</h3>
+		<div class="flex1">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+		<div class="flex1">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+	</div>
+
+	<div>
+		<h3>Display : Flex</h3>
+		<div class="flex2">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+		<div class="flex2">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+	</div>
+
+	<div>
+		<h3>Display : Flex</h3>
+		<div class="flex3">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+		<div class="flex3">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+	</div>
+
+	<div>
+		<h3>Display : Flex</h3>
+		<div class="flex4">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+		<div class="flex4">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

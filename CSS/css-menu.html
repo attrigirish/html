@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#menu{
+			display: flex;
+			flex-direction: column;
+			width:200px;
+		}
+
+		#menu li{
+			list-style-type:none;
+			list-style-position: inside;
+			padding:10px 10px;
+			background-color:orange;
+		}
+
+		#menu ul,ol{
+			display: none;
+		}
+
+		#menu li:hover ul,ol{
+			display: block;
+		}
+
+		#menu li:hover ul > li{
+			background-color:white;
+			color:orange;
+		}
+
+		#menu li:hover{
+			background-color:white;
+			color:orange;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li>Main 1</li>
+		<li>
+			Main 2
+			<ul>
+				<li>Sub 1</li>
+				<li>Sub 2</li>
+				<li>Sub 3</li>
+			</ul>
+		</li>
+		<li>Main 3</li>
+		<li>Main 4</li>
+		<li>Main 5</li>
+	</ul>
+</body>
+</html>

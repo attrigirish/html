@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#header{
+			display: flex;
+		}
+
+		#left{
+			height: 60px;
+			width:33.33%;
+			background-color:cyan;
+		}
+
+		#center{
+			height: 60px;
+			width:33.33%;
+			background-color:red;
+		}
+
+		#sm-heading{
+			display:none;
+		}
+
+		#right{
+			height: 60px;
+			width:33.33%;
+			background-color:blue;
+		}
+
+		@media screen and (max-width: 480px){
+			#header{
+				flex-direction: column;
+			}
+
+			#left,#right{
+				width:100%;
+			}
+
+			#center{
+				display:none;
+			}
+
+			#sm-heading{
+				display: block;
+			}
+
+			#lg-heading{
+				display:none;
+			}
+		}
+
+		@media (max-width: 768px){
+			#header{
+				flex-direction: column;
+			}
+
+			#left,#right,#center{
+				width:100%;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="left">
+		</div>
+		<div id="center">
+		</div>
+		<div id="right">
+		</div>
+	</div>
+
+	<h1 id="lg-heading">Heading for Large Devices</h1>
+	<h1 id="sm-heading">Small Heading</h1>
+</body>
+</html>
